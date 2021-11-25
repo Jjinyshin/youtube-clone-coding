@@ -5,3 +5,28 @@
 
   /* font-size */
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player {
+}
+
+.infobar .metadata {
+  display: flex;
+  flex-direction: column;
+}
+
+.infobar .metadata .tags {
+  list-style: none;
+  display: flex;
+  /* 얘만 가로배치 flex속성으로 왜 안되지? 
+  아하 리스트 각각이 flex적용된건아니니까 또 해줘야되네*/
+}
+
+.infobar .metadata .videoNameAndButton {
+  display: flex;
+  justify-content: space-between;
+}
