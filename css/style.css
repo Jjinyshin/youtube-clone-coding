@@ -28,6 +28,18 @@ body {
   font-family: Roboto;
 }
 
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: none;
+}
+
 /* Header */
 header {
   position: sticky;
@@ -65,16 +77,25 @@ header .icons .fa-search {
   max-width: 1000px;
 }
 
+.infobar {
+  padding: var(--padding);
+}
+
 .infobar .metadata {
   display: flex;
   flex-direction: column;
 }
 
 .infobar .metadata .tags {
-  list-style: none;
   display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
   /* 얘만 가로배치 flex속성으로 왜 안되지? 
   아하 리스트 각각이 flex적용된건아니니까 또 해줘야되네*/
+}
+
+.infobar .metadata .tags li {
+  margin-right: var(--padding);
 }
 
 .infobar .metadata .videoNameAndButton {
@@ -82,11 +103,23 @@ header .icons .fa-search {
   justify-content: space-between;
 }
 
-.infobar .actions {
-  list-style: none;
-  display: flex;
+.infobar .metadata .videoNameAndButton .title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
 }
 
-.infobar .actions li {
-  padding: var(--padding);
+.infobar .metadata .veiwinfo {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.infobar .actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.infobar .actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
 }
